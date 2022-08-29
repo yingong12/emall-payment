@@ -27,7 +27,6 @@ func main() {
 	rdsCFG := components.RedisConfig{
 		ConnectionName: "order-redis",
 		Port:           6379,
-		Password:       "5228088",
 		PoolSize:       100,
 	}
 	providers.RedisConnector, err = components.NewRedisClient(&rdsCFG)
@@ -36,10 +35,11 @@ func main() {
 	}
 
 	dbCFG := components.GormConfig{
-		DBName:   "db_shop",
+		DBName:   "zt_audit",
+		Host:     "rm-2zezu40s4z8q11w0h.mysql.rds.aliyuncs.com",
 		Port:     "3306",
-		Password: "root",
-		UserName: "root",
+		Password: "xie",
+		UserName: "uLHbO1WpsQMgnwrY",
 	}
 	providers.DBconnector, err = components.NewGormDB(&dbCFG)
 	if err != nil {

@@ -18,5 +18,6 @@ func registerRouters() (r *gin.Engine) {
 		order.POST("place", handler.PlaceOrder)
 		order.POST("pay", handler.PayOrder)
 	}
+	r.GET("export_data", handler.Export)
 	return
 }
