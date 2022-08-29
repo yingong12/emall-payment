@@ -38,8 +38,8 @@ func main() {
 		DBName:   "zt_audit",
 		Host:     "rm-2zezu40s4z8q11w0h.mysql.rds.aliyuncs.com",
 		Port:     "3306",
-		Password: "xie",
-		UserName: "uLHbO1WpsQMgnwrY",
+		Password: "uLHbO1WpsQMgnwrY",
+		UserName: "xie",
 	}
 	providers.DBconnector, err = components.NewGormDB(&dbCFG)
 	if err != nil {
