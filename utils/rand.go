@@ -7,7 +7,7 @@ import (
 
 const uidLen = 10
 const accessTokenLen = 20
-const uidPrefix = "bu_"
+const uidPrefix = "u_"
 const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 const charsetNumber = "0123456789"
 
@@ -24,7 +24,7 @@ func genRandomString(prefix string, strLen int, charset string) string {
 func GenerateAccessToken() string {
 	return genRandomString("", accessTokenLen, charset)
 }
-func GenerateUID() string {
+func GenerateUserID() string {
 	return genRandomString(uidPrefix, uidLen, charset)
 }
 func GenerateVerifyCode() string {
@@ -33,17 +33,14 @@ func GenerateVerifyCode() string {
 func GenerateAppID() string {
 	return genRandomString("app_", 10, charset)
 }
-
-func GenerateAuditID() string {
-	return genRandomString("audit_", 10, charset)
+func GenerateTaskID() string {
+	return genRandomString("", 10, charset)
 }
-
-func GenerateValuateID() string {
-	return genRandomString("val_", 16, charset)
+func GenerateSKU() string {
+	return genRandomString("sku_", 10, charset)
 }
-
-func GenerateGroupID() string {
-	return genRandomString("grp_", 16, charset)
+func GenerateOrderID() string {
+	return genRandomString("odr_", 10, charset)
 }
 
 func GenStringWithPrefix(prefix string, strLen int) string {
